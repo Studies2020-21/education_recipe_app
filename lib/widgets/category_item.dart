@@ -51,8 +51,9 @@ class CategoryItem extends StatelessWidget {
                           color: Colors.white,
                         ),
                         SizedBox(width: 10),
+
                         Text(
-                          '${countRecipes.toString()} Recipes',
+                          '${countRecipes.toString()} ' + (countRecipes == 1 ? 'Recipe' : 'Recipes'),
                           style: TextStyle(color: Colors.white),
                         ),
                       ],
