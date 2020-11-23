@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-// import 'package:firebase_storage/firebase_storage.dart';
 
 class CategoryItem extends StatelessWidget {
   final Key key;
@@ -79,26 +78,6 @@ class CategoryItem extends StatelessWidget {
                     alignment: Alignment.centerLeft,
                   ),
                 ),
-                // FutureBuilder(
-                //   future: _getImagePathFromFirebaseStorage(widget.image),
-                //   builder: (ctx, snapshot) {
-                //     if (snapshot.hasData) {
-                //       return Image.network(
-                //         snapshot.data,
-                //         fit: BoxFit.cover,
-                //         alignment: Alignment.centerLeft,
-                //       );
-                //     } else if (snapshot.hasError) {
-                //       Scaffold.of(ctx).showSnackBar(SnackBar(
-                //         content: Text('${snapshot.error}'),
-                //         backgroundColor: Colors.red,
-                //       ));
-                //       return Container();
-                //     } else {
-                //       return Container();
-                //     }
-                //   },
-                // ),
               ),
             ),
           ],
@@ -116,12 +95,4 @@ class CategoryItem extends StatelessWidget {
 
     return Color(int.parse(hexColor, radix: 16));
   }
-
-// Future<String> _getImagePathFromFirebaseStorage(String image) async {
-//   final ref =
-//       FirebaseStorage.instance.ref().child('static_assets').child(image);
-//   final url = await ref.getDownloadURL();
-//   print(url);
-//   return url;
-// }
 }
