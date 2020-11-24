@@ -22,6 +22,7 @@ class Categories extends StatelessWidget {
           return ListView.builder(
             itemCount: categoryDocs.length,
             itemBuilder: (ctx, index) => CategoryItem(
+              categoryDocs[index].id,
               categoryDocs[index].data()['title'],
               categoryDocs[index].data()['description'],
               categoryDocs[index].data()['color'],

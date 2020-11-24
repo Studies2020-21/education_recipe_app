@@ -3,9 +3,11 @@ import 'package:flutter/services.dart';
 import 'package:firebase_core/firebase_core.dart';
 
 import 'package:education_recipe_app/screens/loading_screen.dart';
-import 'package:education_recipe_app/screens/categories_screen.dart';
-import 'package:education_recipe_app/screens/commit_log_screen.dart';
 import 'package:education_recipe_app/screens/about_screen.dart';
+import 'package:education_recipe_app/screens/commit_log_screen.dart';
+import 'package:education_recipe_app/screens/categories_screen.dart';
+import 'package:education_recipe_app/screens/category_screen.dart';
+import 'package:education_recipe_app/screens/recipe_detail_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -52,6 +54,8 @@ class MyApp extends StatelessWidget {
                   routes: {
                     CommitLogScreen.routeName: (ctx) => CommitLogScreen(),
                     AboutScreen.routeName: (ctx) => AboutScreen(),
+                    CategoryScreen.routeName: (ctx) => CategoryScreen(),
+                    RecipeDetailScreen.routeName: (ctx) => RecipeDetailScreen(),
                   },
                 ),
               ),
