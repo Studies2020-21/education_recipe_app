@@ -9,6 +9,8 @@ import 'package:education_recipe_app/screens/categories_screen.dart';
 import 'package:education_recipe_app/screens/category_screen.dart';
 import 'package:education_recipe_app/screens/recipe_detail_screen.dart';
 
+import 'package:education_recipe_app/helpers/page_transitions_slide_in.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -54,13 +56,21 @@ class MyApp extends StatelessWidget {
                   routes: {
                     CommitLogScreen.routeName: (ctx) => CommitLogScreen(),
                     AboutScreen.routeName: (ctx) => AboutScreen(),
-                    CategoryScreen.routeName: (ctx) => CategoryScreen(),
                     RecipeDetailScreen.routeName: (ctx) => RecipeDetailScreen(),
                   },
+                  onGenerateRoute: _onGenerateRoute,
                 ),
               ),
             ),
           );
         });
+  }
+
+  static Route<dynamic> _onGenerateRoute(RouteSettings settings) {
+    switch (settings.name) {
+      case '/category':
+        return PageTransitionsSlideIn(builder: (context) => CategoryScreen(), settings: settings);
+    }
+    throw UnsupportedError('Unknown route: ${settings.name}');
   }
 }
