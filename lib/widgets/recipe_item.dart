@@ -27,6 +27,9 @@ class RecipeItem extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.fromLTRB(6, 0, 6, 6),
       child: InkWell(
+        highlightColor: Colors.transparent,
+        splashColor: Colors.transparent,
+        hoverColor: Colors.transparent,
         onTap: () => _selectRecipe(context),
         child: Card(
           shape: RoundedRectangleBorder(
