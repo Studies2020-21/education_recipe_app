@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:education_recipe_app/screens/category_screen.dart';
+import 'package:education_recipe_app/helpers/color_helper.dart';
 
 class CategoryItem extends StatelessWidget {
   final Key key;
@@ -33,7 +34,7 @@ class CategoryItem extends StatelessWidget {
         onTap: () => _selectCategory(context),
         child: Ink(
           decoration: BoxDecoration(
-            color: getColorFromHex(color),
+            color: ColorHelper.getColorFromHex(color),
             borderRadius: BorderRadius.circular(10),
           ),
           child: Row(
@@ -103,15 +104,5 @@ class CategoryItem extends StatelessWidget {
         ),
       ),
     );
-  }
-
-  Color getColorFromHex(String hexColor) {
-    hexColor = hexColor.toUpperCase().replaceAll('#', '');
-
-    if (hexColor.length == 6) {
-      hexColor = 'FF' + hexColor;
-    }
-
-    return Color(int.parse(hexColor, radix: 16));
   }
 }
