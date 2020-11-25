@@ -5,8 +5,9 @@ import 'package:education_recipe_app/widgets/recipe_item.dart';
 
 class Recipes extends StatelessWidget {
   final String category;
+  final Color categoryColor;
 
-  Recipes(this.category);
+  Recipes(this.category, this.categoryColor);
 
   @override
   Widget build(BuildContext context) {
@@ -36,6 +37,7 @@ class Recipes extends StatelessWidget {
                 recipeDocs[index].data()['author'],
                 recipeDocs[index].data()['createdAt'],
                 recipeDocs[index].data()['updatedAt'],
+                categoryColor,
                 key: ValueKey(recipeDocs[index].id),
               ),
             );

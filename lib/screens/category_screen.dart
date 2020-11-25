@@ -8,15 +8,16 @@ class CategoryScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Map args = ModalRoute.of(context).settings.arguments as Map;
+    final Map _args = ModalRoute.of(context).settings.arguments as Map;
+    final Color _categoryColor = ColorHelper.getColorFromHex(_args['color']);
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: ColorHelper.getColorFromHex(args['color']),
+        backgroundColor: _categoryColor,
         iconTheme: IconThemeData(
           color: Colors.white,
         ),
-        title: Text(args['title']),
+        title: Text(_args['title']),
         centerTitle: true,
         textTheme: ThemeData.light().textTheme.copyWith(
           headline6: TextStyle(
@@ -25,7 +26,7 @@ class CategoryScreen extends StatelessWidget {
           ),
         ),
       ),
-      body: Recipes(args['id']),
+      body: Recipes(_args['id'], _categoryColor),
     );
   }
 }

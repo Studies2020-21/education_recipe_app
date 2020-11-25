@@ -2,7 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-import 'package:education_recipe_app/screens/recipe_detail_screen.dart';
+import 'package:education_recipe_app/screens/recipe_screen.dart';
 
 class RecipeItem extends StatelessWidget {
   final Key key;
@@ -13,13 +13,26 @@ class RecipeItem extends StatelessWidget {
   final String author;
   final Timestamp createdAt;
   final Timestamp updatedAt;
+  final Color categoryColor;
 
   RecipeItem(this.id, this.title, this.image, this.body, this.author,
-      this.createdAt, this.updatedAt,
+      this.createdAt, this.updatedAt, this.categoryColor,
       {this.key});
 
-  void _selectRecipe(BuildContext context) {
-    print('selected');
+  void _selectRecipe(BuildContext ctx) {
+    Navigator.of(ctx).pushNamed(
+      RecipeScreen.routeName,
+      arguments: {
+        'id': id,
+        'title': title,
+        'image': image,
+        'body': body,
+        'author': author,
+        'createdAt': createdAt,
+        'updatedAt': updatedAt,
+        'color': categoryColor,
+      },
+    );
   }
 
   @override
