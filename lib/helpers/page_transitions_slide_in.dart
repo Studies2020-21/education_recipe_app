@@ -21,7 +21,10 @@ class PageTransitionsSlideIn<T> extends MaterialPageRoute<T> {
         begin: const Offset(1, 0),
         end: Offset.zero,
       ).animate(animation),
-      child: child,
+      child: FadeTransition(
+        opacity: animation,
+        child: child,
+      ),
     );
   }
 }
