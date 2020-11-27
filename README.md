@@ -33,6 +33,19 @@ vermieden wurden.
 Zugegeben, dieses Thema wurde bisher etwas stiefmütterlich behandelt, sowohl im Job als auch hier im Kurs.
 Lag hier aber auch an der knappen Zeit zur Umsetzung der Applikation, der Autor gelobt Besserung :wink:
 
+Dieses Repository enthält nur den einen default-Testcase, der beim Erstellen eines Flutter-Projektes automatisch angelegt wird.
+Dieser schlägt natürlich inzwischen fehl, da die gesamte Code-Basis des default-Projektes ersetzt wurde.
+
+Aber das Interesse ist geweckt. Gerade auch, weil das Flutter-SDK einige automatisierte Test-Szenarien von Haus aus bereits mitbringt, darunter:
+* Unit Tests
+* Widget Tests
+* Integration Tests
+
+Weitere Infos unter [Testing Flutter apps](https://flutter.dev/docs/testing)
+
+Und tatsächlich können alle implementierten Tests mit einem einzigen Kommando auf der Shell abgefeuert werden:
+`flutter test`
+
 #### [![Used Practice](https://img.shields.io/badge/Used-Practice-1abc9c.svg)](https://github.com/Studies2020-21/education_recipe_app/tree/EA4-CCD#-source-control-system) Source Control System
 > Always use a source control system.
 
