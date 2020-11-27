@@ -30,6 +30,7 @@ vermieden wurden.
 #### [![Not Yet Used Practice](https://img.shields.io/badge/Not%20Yet%20Used-Practice-yellow.svg)]() Executing Tests Requires Only One Step
 > Run all unit tests with a single command.
 
+Zugegeben, dieses Thema wurde bisher etwas stiefmütterlich behandelt, lag aber auch an der knappen Zeit zur Umsetzung der Applikation.
 
 #### [![Used Practice](https://img.shields.io/badge/Used-Practice-1abc9c.svg)]() Source Control System
 > Always use a source control system.
