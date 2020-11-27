@@ -37,9 +37,9 @@ Dieses Repository enthält nur den einen default-Testcase, der beim Erstellen ei
 Dieser schlägt natürlich inzwischen fehl, da die gesamte Code-Basis des default-Projektes ersetzt wurde.
 
 Aber das Interesse ist geweckt. Gerade auch, weil das Flutter-SDK einige automatisierte Test-Szenarien von Haus aus bereits mitbringt, darunter:
-* Unit Tests
-* Widget Tests
-* Integration Tests
+* Unit-Tests
+* Widget-Tests
+* Integration-Tests
 
 Weitere Infos unter [Testing Flutter apps](https://flutter.dev/docs/testing)
 
@@ -52,6 +52,10 @@ Und tatsächlich können alle implementierten Tests mit einem einzigen Kommando 
 
 #### [![Not Yet Used Practice](https://img.shields.io/badge/Not%20Yet%20Used-Practice-yellow.svg)](https://github.com/Studies2020-21/education_recipe_app/tree/EA4-CCD#-continuous-integration) Continuous Integration
 > Assure integrity with Continuous Integration.
+
+YES! Dies war einer der initialen Gründe, warum man sich hier für eine mobile Applikation entschieden hat:
+ 
+CI & CD bei Mobile Applications sind genau die fragwürdigen Punkte, denen wir uns gerade stellen, insbesondere was das Deployment in die AppStores angeht... schwieriges Thema :wink:
 
 
 
