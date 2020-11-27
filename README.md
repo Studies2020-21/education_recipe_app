@@ -27,7 +27,7 @@ vermieden wurden.
 > Check out and then build with a single command.
 
 
-#### [![Used Practice](https://img.shields.io/badge/Used-Practice-1abc9c.svg)]() Executing Tests Requires Only One Step
+#### [![Not Yet Used Practice](https://img.shields.io/badge/Not%20Yet%20Used-Practice-yellow.svg)]() Executing Tests Requires Only One Step
 > Run all unit tests with a single command.
 
 
@@ -35,7 +35,7 @@ vermieden wurden.
 > Always use a source control system.
 
 
-#### [![Used Practice](https://img.shields.io/badge/Used-Practice-1abc9c.svg)]() Continuous Integration
+#### [![Not Yet Used Practice](https://img.shields.io/badge/Not%20Yet%20Used-Practice-yellow.svg)]() Continuous Integration
 > Assure integrity with Continuous Integration.
 
 
