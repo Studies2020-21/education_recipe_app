@@ -30,7 +30,8 @@ vermieden wurden.
 #### [![Not Yet Used Practice](https://img.shields.io/badge/Not%20Yet%20Used-Practice-yellow.svg)](https://github.com/Studies2020-21/education_recipe_app/tree/EA4-CCD#-executing-tests-requires-only-one-step) Executing Tests Requires Only One Step
 > Run all unit tests with a single command.
 
-Zugegeben, dieses Thema wurde bisher etwas stiefmütterlich behandelt, lag aber auch an der knappen Zeit zur Umsetzung der Applikation.
+Zugegeben, dieses Thema wurde bisher etwas stiefmütterlich behandelt, sowohl im Job als auch hier im Kurs.
+Lag hier aber auch an der knappen Zeit zur Umsetzung der Applikation, der Autor gelobt Besserung :grin:
 
 #### [![Used Practice](https://img.shields.io/badge/Used-Practice-1abc9c.svg)](https://github.com/Studies2020-21/education_recipe_app/tree/EA4-CCD#-source-control-system) Source Control System
 > Always use a source control system.
