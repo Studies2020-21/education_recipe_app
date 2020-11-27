@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:firebase_core/firebase_core.dart';
 
+import 'package:education_recipe_app/helpers/page_transitions_slide_in.dart';
 import 'package:education_recipe_app/screens/loading_screen.dart';
 import 'package:education_recipe_app/screens/about_screen.dart';
 import 'package:education_recipe_app/screens/commit_log_screen.dart';
@@ -9,14 +10,11 @@ import 'package:education_recipe_app/screens/categories_screen.dart';
 import 'package:education_recipe_app/screens/category_screen.dart';
 import 'package:education_recipe_app/screens/recipe_screen.dart';
 
-import 'package:education_recipe_app/helpers/page_transitions_slide_in.dart';
-
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-
     // Disable landscape mode
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,
@@ -25,7 +23,6 @@ class MyApp extends StatelessWidget {
     // Initialize Firebase
     final Future<FirebaseApp> _initialization = Firebase.initializeApp();
     return FutureBuilder(
-        // Initialize FlutterFire:
         future: _initialization,
         builder: (context, appSnapshot) {
           return Container(
@@ -40,11 +37,11 @@ class MyApp extends StatelessWidget {
                     appBarTheme: AppBarTheme(
                       color: Colors.white,
                       textTheme: ThemeData.light().textTheme.copyWith(
-                        headline6: TextStyle(
-                          color: Colors.black,
-                          fontSize: 20,
-                        ),
-                      ),
+                            headline6: TextStyle(
+                              color: Colors.black,
+                              fontSize: 20,
+                            ),
+                          ),
                       iconTheme: IconThemeData(color: Colors.black),
                       elevation: 0,
                     ),
@@ -65,6 +62,7 @@ class MyApp extends StatelessWidget {
         });
   }
 
+  // Routes that use a special page transition need to be registered in _onGenerateRoute
   static Route<dynamic> _onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
       case '/category':

@@ -7,7 +7,9 @@ class RecipeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Get all arguments that were forwarded to this route
     final Map _args = ModalRoute.of(context).settings.arguments as Map;
+    // Replace all linebreaks in the body text
     final String _bodyText = _args['body'].replaceAll('\\n', '\n');
 
     return Scaffold(

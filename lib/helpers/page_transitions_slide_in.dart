@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// Adds a new page transition with slide in effect and fading from the right
 class PageTransitionsSlideIn<T> extends MaterialPageRoute<T> {
   PageTransitionsSlideIn({
     WidgetBuilder builder,
