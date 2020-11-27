@@ -14,15 +14,10 @@ vermieden wurden.
 
 
 
+## Understandability
 
-
-## Headline 2
-
-
-### Headline 3
-
-
-#### [![Used Practice](https://img.shields.io/badge/Used-Practice-1abc9c.svg)]() Headline 4
+#### [![Used Practice](https://img.shields.io/badge/Used-Practice-1abc9c.svg)]() Consistency
+> If you do something a certain way, do all similar things in the same way.
 
 
 #### [![Avoided Smell](https://img.shields.io/badge/Avoided-Smell-red.svg)]() Poorly written comments
@@ -38,6 +33,14 @@ sogenannte `Doc comments` verwendet, um rein theoretisch bei wachsender Code-Bas
 /// Converts a hexadecimal color value to dart color type
 static Color getColorFromHex(String hexColor) {
 ```
+## Useless Stuff
+#### [![Avoided Smell](https://img.shields.io/badge/Avoided-Smell-red.svg)]() Dead Comment, Code
+> Just delete not used things.
+
+## Maintainability Killers
+#### [![Avoided Smell](https://img.shields.io/badge/Avoided-Smell-red.svg)]() Duplication
+> Eliminate duplication. Violation of the „Don’t repeat yourself“ (DRY) principle.
 
 
-##### Headline 5
+#### [![Avoided Smell](https://img.shields.io/badge/Avoided-Smell-red.svg)]() Magic Numbers / Strings
+> Replace Magic Numbers with named constants.
