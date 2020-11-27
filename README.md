@@ -11,61 +11,61 @@ vermieden wurden.
 
 ## General
 
-#### [![Used Practice](https://img.shields.io/badge/Used-Practice-1abc9c.svg)]() Follow Standard Conventions
+#### [![Used Practice](https://img.shields.io/badge/Used-Practice-1abc9c.svg)](https://github.com/Studies2020-21/education_recipe_app/tree/EA4-CCD#-follow-standard-conventions) Follow Standard Conventions
 > Coding-, Architecture-, Design-Guidelines
 
 
 
-#### [![Used Practice](https://img.shields.io/badge/Used-Practice-1abc9c.svg)]() Keep it simple, stupid (KISS)
+#### [![Used Practice](https://img.shields.io/badge/Used-Practice-1abc9c.svg)](https://github.com/Studies2020-21/education_recipe_app/tree/EA4-CCD#-keep-it-simple-stupid-kiss) Keep it simple, stupid (KISS)
 > Simpler is always better. Reduce complexity as much as possible.
 
 
 
 ## Environment
 
-#### [![Used Practice](https://img.shields.io/badge/Used-Practice-1abc9c.svg)]() Project Build Requires Only One Step 
+#### [![Used Practice](https://img.shields.io/badge/Used-Practice-1abc9c.svg)](https://github.com/Studies2020-21/education_recipe_app/tree/EA4-CCD#-project-build-requires-only-one-step) Project Build Requires Only One Step 
 > Check out and then build with a single command.
 
 
-#### [![Not Yet Used Practice](https://img.shields.io/badge/Not%20Yet%20Used-Practice-yellow.svg)]() Executing Tests Requires Only One Step
+#### [![Not Yet Used Practice](https://img.shields.io/badge/Not%20Yet%20Used-Practice-yellow.svg)](https://github.com/Studies2020-21/education_recipe_app/tree/EA4-CCD#-executing-tests-requires-only-one-step) Executing Tests Requires Only One Step
 > Run all unit tests with a single command.
 
 Zugegeben, dieses Thema wurde bisher etwas stiefmütterlich behandelt, lag aber auch an der knappen Zeit zur Umsetzung der Applikation.
 
-#### [![Used Practice](https://img.shields.io/badge/Used-Practice-1abc9c.svg)]() Source Control System
+#### [![Used Practice](https://img.shields.io/badge/Used-Practice-1abc9c.svg)](https://github.com/Studies2020-21/education_recipe_app/tree/EA4-CCD#-source-control-system) Source Control System
 > Always use a source control system.
 
 
-#### [![Not Yet Used Practice](https://img.shields.io/badge/Not%20Yet%20Used-Practice-yellow.svg)]() Continuous Integration
+#### [![Not Yet Used Practice](https://img.shields.io/badge/Not%20Yet%20Used-Practice-yellow.svg)](https://github.com/Studies2020-21/education_recipe_app/tree/EA4-CCD#-continuous-integration) Continuous Integration
 > Assure integrity with Continuous Integration.
 
 
 
 ## Naming
 
-#### [![Used Practice](https://img.shields.io/badge/Used-Practice-1abc9c.svg)]() Choose Descriptive / Unambiguous Names
+#### [![Used Practice](https://img.shields.io/badge/Used-Practice-1abc9c.svg)](https://github.com/Studies2020-21/education_recipe_app/tree/EA4-CCD#-choose-descriptive--unambiguous-names) Choose Descriptive / Unambiguous Names
 > Names have to reflect what a variable, field, property stands for. Names have to be precise.
 
 
-#### [![Used Practice](https://img.shields.io/badge/Used-Practice-1abc9c.svg)]() Name Classes After Implementation
+#### [![Used Practice](https://img.shields.io/badge/Used-Practice-1abc9c.svg)](https://github.com/Studies2020-21/education_recipe_app/tree/EA4-CCD#-name-classes-after-implementation) Name Classes After Implementation
 > The name of a class should reflect how it fulfills the functionality provided by its interface(s).
 
 
-#### [![Used Practice](https://img.shields.io/badge/Used-Practice-1abc9c.svg)]() Name Methods After What They Do
+#### [![Used Practice](https://img.shields.io/badge/Used-Practice-1abc9c.svg)](https://github.com/Studies2020-21/education_recipe_app/tree/EA4-CCD#-name-methods-after-what-they-do) Name Methods After What They Do
 > The name of a method should describe what is done, not how it is done.
 
 
 
 ## Understandability
 
-#### [![Used Practice](https://img.shields.io/badge/Used-Practice-1abc9c.svg)]() Consistency
+#### [![Used Practice](https://img.shields.io/badge/Used-Practice-1abc9c.svg)](https://github.com/Studies2020-21/education_recipe_app/tree/EA4-CCD#-consistency) Consistency
 > If you do something a certain way, do all similar things in the same way.
 
 Grundlegend beinhaltet die Anwendung zwei Datenmodelle, die Kategorien und die Rezepte, welche darin enthalten sind. Sich gleichende Eigenschaften der Daten wurden hinsichtlich der Konsistenz identisch benannt, z.B. title, image u.ä. 
 
 Auch gleichen sich die Listenansicht der Kategorien und die Listen der Rezepte einer Kategorie. Somit wurden auch hier absolut identische Techniken zur Anzeige verwendet: Mit Hilfe des StreamBuilder-Widgets wird jeweils eine Echtzeit-Verbindung zur Firestore-DB aufgebaut, siehe z.B. `lib/widgets/categories.dart`.
 
-#### [![Avoided Smell](https://img.shields.io/badge/Avoided-Smell-red.svg)]() Poorly written comments
+#### [![Avoided Smell](https://img.shields.io/badge/Avoided-Smell-red.svg)](https://github.com/Studies2020-21/education_recipe_app/tree/EA4-CCD#-poorly-written-comments) Poorly written comments
 > Comment does not add any value (redundant to code), is not well formed, not correct grammar/spelling.
 
 Generell wurden Kommentare nur an den Stellen verwendet, wo sie tatsächlich zum leichteren Verständnis des Programmablaufs hilfreich sind. Stattdessen wurde das Augenmerk lieber auf gut lesbaren Code gelegt. Da bei vorliegendem Sourcecode die Konventionen angewendet wurden, die für Dart und das Flutter SDK bereitgestellt werden, sollte sich jeder Entwickler schnell zurechtfinden.
@@ -81,11 +81,11 @@ static Color getColorFromHex(String hexColor) {
 
 ## Conditionals
 
-#### [![Used Practice](https://img.shields.io/badge/Used-Practice-1abc9c.svg)]() Avoid Negative Conditionals
+#### [![Used Practice](https://img.shields.io/badge/Used-Practice-1abc9c.svg)](https://github.com/Studies2020-21/education_recipe_app/tree/EA4-CCD#-avoid-negative-conditionals) Avoid Negative Conditionals
 > Negative conditionals are harder to read than positive conditionals
 
 ## Useless Stuff
-#### [![Avoided Smell](https://img.shields.io/badge/Avoided-Smell-red.svg)]() Dead Comment, Code
+#### [![Avoided Smell](https://img.shields.io/badge/Avoided-Smell-red.svg)](https://github.com/Studies2020-21/education_recipe_app/tree/EA4-CCD#-dead-comment-code) Dead Comment, Code
 > Just delete not used things.
 
 Im Zuge der Entwicklung der Anwendung wurde tatsächlich des Öfteren refactored. 
@@ -94,7 +94,7 @@ Gerade die Bereitstellung einer zusätzlichen Web-Applikation hat mehrfach zu nu
 Sämtliche auskommentierten Codeblöcke wurden hinsichtlich CCD entfernt, da sie sich ohnehin noch im Version Control System befinden, falls nochmal darauf zugegriffen werden müsste. 
 
 ## Maintainability Killers
-#### [![Avoided Smell](https://img.shields.io/badge/Avoided-Smell-red.svg)]() Magic Numbers / Strings
+#### [![Avoided Smell](https://img.shields.io/badge/Avoided-Smell-red.svg)](https://github.com/Studies2020-21/education_recipe_app/tree/EA4-CCD#-magic-numbers--strings) Magic Numbers / Strings
 > Replace Magic Numbers with named constants.
 
 Magic Numbers sind im Sourcecode eines Programms auftauchende Zahlenwerte, deren Bedeutung sich nicht unmittelbar erkennen lässt. Auf Verwendung wurde verzichtet, stattdessen wurden Konstantendefinitionen eingesetzt.
@@ -154,7 +154,7 @@ SizedBox(height: 20),
 Bei allen diesen Beispielen handelt es sich aber um vordefinierte Parameter der eingesetzten Widgets, bei denen eindeutig erkennbar ist ("named params"), dass es sich um notwendige Angaben in Pixel handelt. Eine Ersetzung mit Konstanten ist in diesen Fällen also kontraproduktiv, da es die Lesbarkeit eher erschweren würde.
 
 
-#### [![Avoided Smell](https://img.shields.io/badge/Avoided-Smell-red.svg)]() Duplication
+#### [![Avoided Smell](https://img.shields.io/badge/Avoided-Smell-red.svg)](https://github.com/Studies2020-21/education_recipe_app/tree/EA4-CCD#-duplication) Duplication
 > Eliminate duplication. Violation of the „Don’t repeat yourself“ (DRY) principle.
 
 Auf Duplikationen wurde ebenso verzichtet. Die im letzten Punkt genannte Funktion `getColorFromHex(...)` in der Klasse `ColorHelper` wird an verschiedenen Stellen benötigt und deshalb in die Helper-Klasse ausgelagert. Sie wird wie folgt aufgerufen.
