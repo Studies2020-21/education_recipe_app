@@ -10,12 +10,13 @@ class RecipeItem extends StatelessWidget {
   final String title;
   final String image;
   final String body;
+  final String textType;
   final String author;
   final Timestamp createdAt;
   final Timestamp updatedAt;
   final Color categoryColor;
 
-  RecipeItem(this.id, this.title, this.image, this.body, this.author,
+  RecipeItem(this.id, this.title, this.image, this.body, this.textType, this.author,
       this.createdAt, this.updatedAt, this.categoryColor,
       {this.key});
 
@@ -27,6 +28,7 @@ class RecipeItem extends StatelessWidget {
         'title': title,
         'image': image,
         'body': body,
+        'textType': textType,
         'author': author,
         'createdAt': createdAt,
         'updatedAt': updatedAt,

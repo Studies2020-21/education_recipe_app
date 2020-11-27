@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:flutter_markdown/flutter_markdown.dart';
 
 class RecipeScreen extends StatelessWidget {
   static const routeName = '/recipe-detail';
@@ -7,6 +8,7 @@ class RecipeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Map _args = ModalRoute.of(context).settings.arguments as Map;
+    final String _bodyText = _args['body'].replaceAll('\\n', '\n');
 
     return Scaffold(
       appBar: AppBar(
@@ -45,7 +47,10 @@ class RecipeScreen extends StatelessWidget {
                     style: Theme.of(context).textTheme.headline6,
                   ),
                   SizedBox(height: 20),
-                  Text(_args['body']),
+                  if (_args['textType'] == 'markdown')
+                    MarkdownBody(data: _bodyText)
+                  else
+                    Text(_bodyText),
                   SizedBox(height: 20),
                   Row(
                     children: [

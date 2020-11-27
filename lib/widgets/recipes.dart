@@ -34,6 +34,7 @@ class Recipes extends StatelessWidget {
                 recipeDocs[index].data()['title'],
                 recipeDocs[index].data()['image'],
                 recipeDocs[index].data()['body'],
+                recipeDocs[index].data()['textType'],
                 recipeDocs[index].data()['author'],
                 recipeDocs[index].data()['createdAt'],
                 recipeDocs[index].data()['updatedAt'],
