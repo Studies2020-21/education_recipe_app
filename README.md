@@ -46,10 +46,72 @@ Gerade die Bereitstellung einer zusätzlichen Web-Applikation hat mehrfach zu nu
 Sämtliche auskommentierten Codeblöcke wurden hinsichtlich CCD entfernt, da sie sich ohnehin noch im Version Control System befinden, falls nochmal darauf zugegriffen werden müsste. 
 
 ## Maintainability Killers
+#### [![Avoided Smell](https://img.shields.io/badge/Avoided-Smell-red.svg)]() Magic Numbers / Strings
+> Replace Magic Numbers with named constants.
+
+Magic Numbers sind im Sourcecode eines Programms auftauchende Zahlenwerte, deren Bedeutung sich nicht unmittelbar erkennen lässt. Auf Verwendung wurde verzichtet, stattdessen wurden Konstantendefinitionen eingesetzt.
+
+Aus `lib/helpers/color_helper.dart`:
+
+```
+class ColorHelper {
+  static Color getColorFromHex(String hexColor) {
+    hexColor = hexColor.toUpperCase().replaceAll('#', '');
+
+    if (hexColor.length == 6) {
+      hexColor = 'FF' + hexColor;
+    }
+
+    return Color(int.parse(hexColor, radix: 16));
+  }
+}
+```
+
+wurde somit:
+
+```
+class ColorHelper {
+  static const HEX_COLOR_LENGTH = 6;
+  static const COLOR_RADIX = 16;
+
+  static Color getColorFromHex(String hexColor) {
+    hexColor = hexColor.toUpperCase().replaceAll('#', '');
+
+    if (hexColor.length == HEX_COLOR_LENGTH) {
+      hexColor = 'FF' + hexColor;
+    }
+
+    return Color(int.parse(hexColor, radix: COLOR_RADIX));
+  }
+}
+```
+
+Im Quellcode finden sich natürlich noch viele weitere Zahlenwerte, z.B.:
+```
+Container(
+  height: 300,
+  ...
+),
+
+TextStyle(
+  fontSize: 20,
+  ...
+),
+
+SizedBox(height: 20),
+
+[... und viele mehr ...]
+```
+
+Bei allen diesen Beispielen handelt es sich aber um vordefinierte Parameter der eingesetzten Widgets, bei denen eindeutig erkennbar ist ("named params"), dass es sich um notwendige Angaben in Pixel handelt. Eine Ersetzung mit Konstanten ist in diesen Fällen also kontraproduktiv, da es die Lesbarkeit eher erschweren würde.
+
+
 #### [![Avoided Smell](https://img.shields.io/badge/Avoided-Smell-red.svg)]() Duplication
 > Eliminate duplication. Violation of the „Don’t repeat yourself“ (DRY) principle.
 
+Auf Duplikationen wurde ebenso verzichtet. Die im letzten Punkt genannte Funktion `getColorFromHex(...)` in der Klasse `ColorHelper` wird an verschiedenen Stellen benötigt und deshalb in die Helper-Klasse ausgelagert. Sie wird wie folgt aufgerufen.
 
-
-#### [![Avoided Smell](https://img.shields.io/badge/Avoided-Smell-red.svg)]() Magic Numbers / Strings
-> Replace Magic Numbers with named constants.
+Z.B. in: `lib/screens/category_screen.dart`:
+```
+final Color _categoryColor = ColorHelper.getColorFromHex(_args['color']);
+```
