@@ -28,6 +28,8 @@ vermieden wurden.
 #### [![Avoided Smell](https://img.shields.io/badge/Avoided-Smell-red.svg)]() Poorly written comments
 > Comment does not add any value (redundant to code), is not well formed, not correct grammar/spelling.
 
+Generell wurden Kommentare nur an den Stellen verwendet, wo sie tatsächlich zum leichteren Verständnis des Programmablaufs hilfreich sind. Stattdessen wurde das Augenmerk lieber auf gut lesbaren Code gelegt. Da bei vorliegendem Sourcecode die Konventionen angewendet wurden, die für Dart und das Flutter SDK bereitgestellt werden, sollte sich jeder Entwickler schnell zurechtfinden.
+
 Zudem wurden teilweise bereits gem. den Konventionen [Effective Dart: Documentation](https://dart.dev/guides/language/effective-dart/documentation)
 sogenannte `Doc comments` verwendet, um rein theoretisch bei wachsender Code-Basis mit dem Tool [dartdoc](https://github.com/dart-lang/dartdoc) automatisiert strukturierte Dokumentationsseiten erstellen zu können:
 
@@ -36,7 +38,6 @@ sogenannte `Doc comments` verwendet, um rein theoretisch bei wachsender Code-Bas
 /// Converts a hexadecimal color value to dart color type
 static Color getColorFromHex(String hexColor) {
 ```
-https://github.com/Studies2020-21/education_recipe_app/blob/8627962518c85d0158f1c8e41d4150b907f4167b/lib/helpers/color_helper.dart#L11-L12
 
 
 ##### Headline 5
