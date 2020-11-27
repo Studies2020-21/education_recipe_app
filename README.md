@@ -9,8 +9,49 @@ angewendet bzw. welche
 [![CCD Smells](https://img.shields.io/badge/CCD-Smells-red.svg)](https://github.com/Studies2020-21/education_recipe_app/tree/EA4-CCD#ea4---clean-code-development)
 vermieden wurden.
 
+## General
+
+#### [![Used Practice](https://img.shields.io/badge/Used-Practice-1abc9c.svg)]() Follow Standard Conventions
+> Coding-, Architecture-, Design-Guidelines
 
 
+
+#### [![Used Practice](https://img.shields.io/badge/Used-Practice-1abc9c.svg)]() Keep it simple, stupid (KISS)
+> Simpler is always better. Reduce complexity as much as possible.
+
+
+
+## Environment
+
+#### [![Used Practice](https://img.shields.io/badge/Used-Practice-1abc9c.svg)]() Project Build Requires Only One Step 
+> Check out and then build with a single command.
+
+
+#### [![Used Practice](https://img.shields.io/badge/Used-Practice-1abc9c.svg)]() Executing Tests Requires Only One Step
+> Run all unit tests with a single command.
+
+
+#### [![Used Practice](https://img.shields.io/badge/Used-Practice-1abc9c.svg)]() Source Control System
+> Always use a source control system.
+
+
+#### [![Used Practice](https://img.shields.io/badge/Used-Practice-1abc9c.svg)]() Continuous Integration
+> Assure integrity with Continuous Integration.
+
+
+
+## Naming
+
+#### [![Used Practice](https://img.shields.io/badge/Used-Practice-1abc9c.svg)]() Choose Descriptive / Unambiguous Names
+> Names have to reflect what a variable, field, property stands for. Names have to be precise.
+
+
+#### [![Used Practice](https://img.shields.io/badge/Used-Practice-1abc9c.svg)]() Name Classes After Implementation
+> The name of a class should reflect how it fulfills the functionality provided by its interface(s).
+
+
+#### [![Used Practice](https://img.shields.io/badge/Used-Practice-1abc9c.svg)]() Name Methods After What They Do
+> The name of a method should describe what is done, not how it is done.
 
 
 
@@ -36,6 +77,12 @@ sogenannte `Doc comments` verwendet, um rein theoretisch bei wachsender Code-Bas
 /// Converts a hexadecimal color value to dart color type
 static Color getColorFromHex(String hexColor) {
 ```
+
+## Conditionals
+
+#### [![Used Practice](https://img.shields.io/badge/Used-Practice-1abc9c.svg)]() Avoid Negative Conditionals
+> Negative conditionals are harder to read than positive conditionals
+
 ## Useless Stuff
 #### [![Avoided Smell](https://img.shields.io/badge/Avoided-Smell-red.svg)]() Dead Comment, Code
 > Just delete not used things.
