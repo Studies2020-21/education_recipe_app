@@ -30,6 +30,7 @@ vermieden wurden.
 
 Zudem wurden teilweise bereits gem. den Konventionen [Effective Dart: Documentation](https://dart.dev/guides/language/effective-dart/documentation)
 sogenannte `Doc comments` verwendet, um rein theoretisch bei wachsender Code-Basis mit dem Tool [dartdoc](https://github.com/dart-lang/dartdoc) automatisiert strukturierte Dokumentationsseiten erstellen zu können:
+
 https://github.com/Studies2020-21/education_recipe_app/blob/8627962518c85d0158f1c8e41d4150b907f4167b/lib/helpers/color_helper.dart#L11-L12
 
 
