@@ -53,7 +53,7 @@ Und tatsächlich können alle implementierten Tests mit einem einzigen Kommando 
 #### [![Not Yet Used Practice](https://img.shields.io/badge/Not%20Yet%20Used-Practice-yellow.svg)](https://github.com/Studies2020-21/education_recipe_app/tree/EA4-CCD#-continuous-integration) Continuous Integration
 > Assure integrity with Continuous Integration.
 
-Noch nicht integriert, kommt aber definitiv mit den nächsten Einsendeaufgaben.
+Noch nicht integriert, kommt aber definitiv mit den nächsten Einsendeaufgaben. Diesen Bereich erkunden zu können war einer der Gründe, warum man sich hier für eine mobile Applikation entschieden hat.
  
 Gerade das Signieren und Veröffentlichen von mobilen Applikationen in den AppStores von Google und Apple ist ein sehr aufwendiger Prozess, der aber heutzutage mit geeigneten Tools massiv vereinfacht werden kann.
 
