@@ -14,7 +14,23 @@ vermieden wurden.
 #### [![Used Practice](https://img.shields.io/badge/Used-Practice-1abc9c.svg)](https://github.com/Studies2020-21/education_recipe_app/tree/EA4-CCD#-follow-standard-conventions) Follow Standard Conventions
 > Coding-, Architecture-, Design-Guidelines
 
+Der Quellcode einer Flutter-Applikation befindet sich im Ordner `lib/`, alle anderen Ordner werden von Flutter für die Ziel-Plattformen, Tests u.ä. genutzt. Innerhalb des lib-Ordners muss eine `main.dart` vorgehalten werden, welche die main-Funktion ausführt: `void main() => runApp(MyApp());`.
 
+Ab diesem Punkt sind die Entwickler frei in der Gestaltung ihrer Anwendung. Natürlich gibt es aber Best Practices, welche im Dokument [Effective Dart](https://dart.dev/guides/language/effective-dart) umfassend erläutert werden. Beim Erstellen dieser App wurde darauf geachtet, möglichst viele dieser Best Practices anzuwenden.
+
+Insbesondere eine standardisierte Struktur von Ordnern und Dateien sollte künftigen Lesern des Codes ein schnelles Zurechtfinden ermöglichen. Hierbei hat sich bei diesem eigentlich noch recht jungen Framework bereits folgende Struktur etabliert:
+
+`screens/` für alle Seiten der Applikation,
+
+`widgets/` für selbst erstellte Widgets, die überall im Code verwendet werden können,
+
+`helpers/` für Helper-Klassen,
+
+`models/` für Datenmodels (hier nicht verwendet, da die Daten direkt von der Firestore-DB kommen),
+
+`providers/` für Daten-Provider-Klassen (entfällt hier ebenfalls aufgrund der Firebase-Integration).
+
+Bez. Design-Konventionen orientieren sich alle Systembausteine des Flutter-Frameworks per Default an Google's Material-Design-Konzept. Auch hier hätte ein Entwickler jedoch alle Freiheiten und könnte eine App z.B. ebenso in Apple's Cupertino-Style implementieren.
 
 #### [![Used Practice](https://img.shields.io/badge/Used-Practice-1abc9c.svg)](https://github.com/Studies2020-21/education_recipe_app/tree/EA4-CCD#-keep-it-simple-stupid-kiss) Keep it simple, stupid (KISS)
 > Simpler is always better. Reduce complexity as much as possible.
