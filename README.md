@@ -26,6 +26,20 @@ vermieden wurden.
 #### [![Used Practice](https://img.shields.io/badge/Used-Practice-1abc9c.svg)](https://github.com/Studies2020-21/education_recipe_app/tree/EA4-CCD#-project-build-requires-only-one-step) Project Build Requires Only One Step 
 > Check out and then build with a single command.
 
+Das Flutter Toolset bietet drei verschiedene Build Modes an, die über einfache Befehle in der Kommandozeile oder über Plugins in den gängigen IDEs angestossen werden können:
+
+##### Release Mode
+Der Release Mode wird zum Deployen der App verwendet. Hierbei wird der Code optimiert, indem z.B. Debugging-Informationen entfernt werden und die App für einen schnellen Start, performante Ausführung und geringe Dateigröße kompiliert wird.
+Ein Release lässt sich für mit `flutter run --release` alle konfigurierten Plattformen durchführen oder mit `flutter build <target>` für eine spezifische Plattform (hier iOS, Android oder Web).
+
+##### Debug Mode
+Zur Entwicklung wird der Debug Mode verwendet, welcher per Default mit `flutter run` kompiliert wird. Auch hier können verschiedene Ziele verwendet werden.
+
+Eine Besonderheit bei der App-Entwicklung mit Flutter stellt der [Hot Reload](https://flutter.dev/docs/development/tools/hot-reload) dar.
+Hierbei werden aktualisierte Quellcodedateien in die laufende Dart Virtual Machine (VM) eingefügt, woraufhin der Widget-Baum automatisch neu erstellt wird, sodass die Auswirkungen von Änderungen schnell angezeigt werden können. Bei der Flutter-Entwicklung hat man somit eigentlich durchgehend einen Android- oder iOS-Simulator geöffnet, auf dem der aktuelle Stand in Sekundenbruchteilen angezeigt wird.
+
+##### Profile Mode
+Zudem existiert mit `flutter run --profile` noch ein Build Modus zur Performance Analyse, bei dem das sogenannte Tracing eingeschaltet wird, wodurch sich verschiedene angebotene Source-Level Debugging Tools mit den Prozessen verbinden können.
 
 #### [![Not Yet Used Practice](https://img.shields.io/badge/Not%20Yet%20Used-Practice-yellow.svg)](https://github.com/Studies2020-21/education_recipe_app/tree/EA4-CCD#-executing-tests-requires-only-one-step) Executing Tests Requires Only One Step
 > Run all unit tests with a single command.
