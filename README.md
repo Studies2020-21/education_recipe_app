@@ -35,7 +35,38 @@ Bez. Design-Konventionen orientieren sich alle Systembausteine des Flutter-Frame
 #### [![Used Practice](https://img.shields.io/badge/Used-Practice-1abc9c.svg)](https://github.com/Studies2020-21/education_recipe_app/tree/EA4-CCD#-keep-it-simple-stupid-kiss) Keep it simple, stupid (KISS)
 > Simpler is always better. Reduce complexity as much as possible.
 
+In Flutter bestehen Apps aus einzelnen Widgets, die ineinander verschachtelt werden und den sogenannten Widget-Tree bilden, welcher auf Endgeräten gerendert wird.
+Neben den angebotenen Core-Widgets kann ein Developer beliebig eigene Widgets entwerfen und überall im Code verwenden. 
+Dieses Konzept bietet sehr gute Voraussetzungen, um den Code so einfach wie möglich zu halten. 
 
+Hier wurde diese Möglichkeit an vielen Stellen genutzt, um die einzelnen Klassen möglichst simpel zu halten. Als Beispiel sei die initiale Anzeige der Rezept-Kategorien genannt.
+Die Implementierung der Seite zur Anzeige der Kategorien besteht aus lediglich 17 Zeilen Code:
+
+`lib/screens/categories_screen.dart`
+
+```
+import 'package:flutter/material.dart';
+
+import 'package:education_recipe_app/widgets/app_drawer.dart';
+import 'package:education_recipe_app/widgets/categories.dart';
+
+class CategoriesScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Educational Recipes'),
+      ),
+      drawer: AppDrawer(),
+      body: Categories(),
+    );
+  }
+}
+```
+
+Zur Anzeige der Kategorien wird sodann das eigens erstellte Widget `Categories()` aus der Datei `lib/widgets/categories.dart` eingebunden, welches sich mit Firebase verbindet und die Liste der Kategorien erstellt.
+
+Die Implementierung der Anzeige jedes einzelnen Kategorie-Eintrags in dieser Liste ist zuletzt noch einmal ausgelagert in die Datei `lib/widgets/category-item.dart`.
 
 ## Environment
 
