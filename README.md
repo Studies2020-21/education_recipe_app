@@ -130,18 +130,69 @@ Hinsichtlich Flutter Applikationen wurde auf der "Flutter Live" Konferenz 2018 i
 
 ## Naming
 
+Die Namenskonventionen für Variablen, Attribute, Klassen, Methoden etc. wurden eingehalten, im Folgenden ein paar Beispiele:
+
 #### [![Used Practice](https://img.shields.io/badge/Used-Practice-1abc9c.svg)](https://github.com/Studies2020-21/education_recipe_app/tree/EA4-CCD#-choose-descriptive--unambiguous-names) Choose Descriptive / Unambiguous Names
 > Names have to reflect what a variable, field, property stands for. Names have to be precise.
 
+Am Beispiel der Listenerstellung für die Rezepte: 
+
+
+`lib/widgets/recipes.dart`
+```
+final recipeDocs = recipesSnapshot.data.docs;
+if (recipeDocs.length > 0) {
+    return ListView.builder(
+      itemCount: recipeDocs.length,
+      itemBuilder: (ctx, index) => RecipeItem(
+        recipeDocs[index].id,
+        recipeDocs[index].data()['title'],
+        recipeDocs[index].data()['image'],
+        recipeDocs[index].data()['body'],
+        recipeDocs[index].data()['textType'],
+        recipeDocs[index].data()['author'],
+        recipeDocs[index].data()['createdAt'],
+        recipeDocs[index].data()['updatedAt'],
+        categoryColor,
+        key: ValueKey(recipeDocs[index].id),
+      ),
+    );
+} else {
+...
+```
+
+Die von Firestore zurückgegebenen Dokumente werden in der Variable `recipeDocs` gespeichert, das einzelne `RecipeItem` erhält dann sämtliche Parameter mit selbsterklärenden Bezeichnern.
 
 #### [![Used Practice](https://img.shields.io/badge/Used-Practice-1abc9c.svg)](https://github.com/Studies2020-21/education_recipe_app/tree/EA4-CCD#-name-classes-after-implementation) Name Classes After Implementation
 > The name of a class should reflect how it fulfills the functionality provided by its interface(s).
 
+Auch die Klassen-Bezeichner sollten selbsterklärend sein. So wurden beispielsweise sämtliche Seiten, die in der App angesteuert werden können, mit dem Suffix `Screen` versehen:
+
+```
+AboutScreen()
+CategoriesScreen()
+RecipeScreen()
+...
+```
+
+Auch die Widgets für einzelne Kategorien und Rezepte sind durch das Suffix `Item` eindeutig erkennbar:
+
+```
+CategoryItem()
+RecipeItem()
+```
 
 #### [![Used Practice](https://img.shields.io/badge/Used-Practice-1abc9c.svg)](https://github.com/Studies2020-21/education_recipe_app/tree/EA4-CCD#-name-methods-after-what-they-do) Name Methods After What They Do
 > The name of a method should describe what is done, not how it is done.
 
+Durch das Widget-Konzept existieren nicht all zu viele Methoden im jetzigen Stand der Applikation. Bei der Benennung der wenigen die es gibt, wurde auf einen aussagekräftigen Methodennamen Wert gelegt, ohne dass dieser zu lang werden sollte, z.B.:
 
+`lib/helper/color_helper.dart`
+```
+/// Converts a hexadecimal color value to dart color type
+static Color getColorFromHex(String hexColor) {
+...
+```
 
 ## Understandability
 
