@@ -41,7 +41,7 @@ Aber das Interesse ist geweckt. Gerade auch, weil das Flutter-SDK einige automat
 * Widget-Tests
 * Integration-Tests
 
-Weitere Infos unter [Testing Flutter apps](https://flutter.dev/docs/testing)
+Weitere Infos unter [Testing Flutter apps](https://flutter.dev/docs/testing).
 
 Und tatsächlich können alle implementierten Tests mit einem einzigen Kommando auf der Shell abgefeuert werden:
 `flutter test`
@@ -53,9 +53,11 @@ Und tatsächlich können alle implementierten Tests mit einem einzigen Kommando 
 #### [![Not Yet Used Practice](https://img.shields.io/badge/Not%20Yet%20Used-Practice-yellow.svg)](https://github.com/Studies2020-21/education_recipe_app/tree/EA4-CCD#-continuous-integration) Continuous Integration
 > Assure integrity with Continuous Integration.
 
-YES! Dies war einer der initialen Gründe, warum man sich hier für eine mobile Applikation entschieden hat:
+Noch nicht integriert, kommt aber definitiv mit den nächsten Einsendeaufgaben.
  
-CI & CD bei Mobile Applications sind genau die fragwürdigen Punkte, denen wir uns gerade stellen, insbesondere was das Deployment in die AppStores angeht... schwieriges Thema :wink:
+Gerade das Signieren und Veröffentlichen von mobilen Applikationen in den AppStores von Google und Apple ist ein sehr aufwendiger Prozess, der aber heutzutage mit geeigneten Tools massiv vereinfacht werden kann.
+
+Hinsichtlich Flutter Applikationen wurde auf der "Flutter Live" Konferenz 2018 in London eine dedizierte CI/CD-Lösung namens Codemagic vorgestellt, siehe [codemagic.io](https://codemagic.io/start/). Das wird spannend... :smile:
 
 
 
