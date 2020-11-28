@@ -49,6 +49,14 @@ Und tatsächlich können alle implementierten Tests mit einem einzigen Kommando 
 #### [![Used Practice](https://img.shields.io/badge/Used-Practice-1abc9c.svg)](https://github.com/Studies2020-21/education_recipe_app/tree/EA4-CCD#-source-control-system) Source Control System
 > Always use a source control system.
 
+Eher vertraut mit GitLab wurde hier bewusst GitHub eingesetzt, zu Testzwecken und auch um die angedachte Verbindung zum Education Repository leichter herstellen zu können.
+
+Die Vorteile einer Versionskontrolle liegen auf der Hand:
+- umfassender Verlauf der langfristigen Änderungen für jede Datei
+- Branching und Merging für verteilte Teamarbeit
+- Nachverfolgbarkeit
+
+Daneben ist als großer Vorteil ebenfalls noch anzuführen, dass sich jegliche weitere Backup-Lösungen mit dem Einsatz eines Version Control Systems erübrigen, da der Code ohnehin an mehreren Stellen physisch vorgehalten wird, u.a. im lokalen Dateisystem, einem lokalen Repository und dem Remote Repository.
 
 #### [![Not Yet Used Practice](https://img.shields.io/badge/Not%20Yet%20Used-Practice-yellow.svg)](https://github.com/Studies2020-21/education_recipe_app/tree/EA4-CCD#-continuous-integration) Continuous Integration
 > Assure integrity with Continuous Integration.
