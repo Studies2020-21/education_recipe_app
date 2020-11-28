@@ -30,7 +30,7 @@ Das Flutter Toolset bietet drei verschiedene Build Modes an, die über einfache 
 
 ##### Release Mode
 Der Release Mode wird zum Deployen der App verwendet. Hierbei wird der Code optimiert, indem z.B. Debugging-Informationen entfernt werden und die App für einen schnellen Start, performante Ausführung und geringe Dateigröße kompiliert wird.
-Ein Release lässt sich für mit `flutter run --release` alle konfigurierten Plattformen durchführen oder mit `flutter build <target>` für eine spezifische Plattform (hier iOS, Android oder Web).
+Ein Release lässt sich mit `flutter run --release` für alle konfigurierten Plattformen durchführen oder mit `flutter build <target>` für eine spezifische Plattform (hier iOS, Android oder Web).
 
 ##### Debug Mode
 Zur Entwicklung wird der Debug Mode verwendet, welcher per Default mit `flutter run` kompiliert wird. Auch hier können verschiedene Ziele verwendet werden.
@@ -81,8 +81,6 @@ Gerade das Signieren und Veröffentlichen von mobilen Applikationen in den AppSt
 
 Hinsichtlich Flutter Applikationen wurde auf der "Flutter Live" Konferenz 2018 in London eine dedizierte CI/CD-Lösung namens Codemagic vorgestellt, siehe [codemagic.io](https://codemagic.io/start/). Das wird spannend... :smile:
 
-
-
 ## Naming
 
 #### [![Used Practice](https://img.shields.io/badge/Used-Practice-1abc9c.svg)](https://github.com/Studies2020-21/education_recipe_app/tree/EA4-CCD#-choose-descriptive--unambiguous-names) Choose Descriptive / Unambiguous Names
@@ -125,6 +123,26 @@ static Color getColorFromHex(String hexColor) {
 
 #### [![Used Practice](https://img.shields.io/badge/Used-Practice-1abc9c.svg)](https://github.com/Studies2020-21/education_recipe_app/tree/EA4-CCD#-avoid-negative-conditionals) Avoid Negative Conditionals
 > Negative conditionals are harder to read than positive conditionals
+
+Beim Schreiben von Code sollte man immer davon ausgehen, dass eine andere Person oder auch man selbst eines Tages versuchen wird, diesen Code zu lesen und zu verstehen.
+Daher sollte man darauf achten, dass der Code von Menschen schnell und einfach verstanden werden kann.
+Die Vermeidung von negativen Bedingungen ist eine der Maßnahmen, die hierfür angewendet wird.
+
+Aus `lib/screens/recipe_screen.dart`:
+
+```
+if (!_args['createdAt'] && !_args['updatedAt'] && !_args['author']) {
+...
+```
+
+wurde somit:
+
+```
+if (_args['createdAt'] == null &&
+    _args['updatedAt'] == null &&
+    _args['author']    == null) {
+...
+```
 
 ## Useless Stuff
 #### [![Avoided Smell](https://img.shields.io/badge/Avoided-Smell-red.svg)](https://github.com/Studies2020-21/education_recipe_app/tree/EA4-CCD#-dead-comment-code) Dead Comment, Code
@@ -194,7 +212,6 @@ SizedBox(height: 20),
 ```
 
 Bei allen diesen Beispielen handelt es sich aber um vordefinierte Parameter der eingesetzten Widgets, bei denen eindeutig erkennbar ist ("named params"), dass es sich um notwendige Angaben in Pixel handelt. Eine Ersetzung mit Konstanten ist in diesen Fällen also kontraproduktiv, da es die Lesbarkeit eher erschweren würde.
-
 
 #### [![Avoided Smell](https://img.shields.io/badge/Avoided-Smell-red.svg)](https://github.com/Studies2020-21/education_recipe_app/tree/EA4-CCD#-duplication) Duplication
 > Eliminate duplication. Violation of the „Don’t repeat yourself“ (DRY) principle.
