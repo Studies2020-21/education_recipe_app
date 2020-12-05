@@ -3,16 +3,20 @@ import 'package:flutter/services.dart';
 import 'package:firebase_core/firebase_core.dart';
 
 import 'package:education_recipe_app/helpers/page_transitions_slide_in.dart';
-import 'package:education_recipe_app/screens/loading_screen.dart';
 import 'package:education_recipe_app/screens/about_screen.dart';
 import 'package:education_recipe_app/screens/commit_log_screen.dart';
 import 'package:education_recipe_app/screens/categories_screen.dart';
 import 'package:education_recipe_app/screens/category_screen.dart';
 import 'package:education_recipe_app/screens/recipe_screen.dart';
 
-void main() => runApp(MyApp());
+void main() async {
+  // Initialize Firebase
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(EducationRecipeApp());
+}
 
-class MyApp extends StatelessWidget {
+class EducationRecipeApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // Disable landscape mode
@@ -20,46 +24,38 @@ class MyApp extends StatelessWidget {
       DeviceOrientation.portraitUp,
     ]);
 
-    // Initialize Firebase
-    final Future<FirebaseApp> _initialization = Firebase.initializeApp();
-    return FutureBuilder(
-        future: _initialization,
-        builder: (context, appSnapshot) {
-          return Container(
-            color: Colors.grey.shade300,
-            child: Center(
-              child: Container(
-                constraints: BoxConstraints(maxWidth: 500),
-                child: MaterialApp(
-                  theme: ThemeData(
-                    scaffoldBackgroundColor: Colors.white,
-                    // We apply this to our appBarTheme because most of our appBar have this style
-                    appBarTheme: AppBarTheme(
-                      color: Colors.white,
-                      textTheme: ThemeData.light().textTheme.copyWith(
-                            headline6: TextStyle(
-                              color: Colors.black,
-                              fontSize: 20,
-                            ),
-                          ),
-                      iconTheme: IconThemeData(color: Colors.black),
-                      elevation: 0,
+    return Container(
+      color: Colors.grey.shade300,
+      child: Center(
+        child: Container(
+          constraints: BoxConstraints(maxWidth: 500),
+          child: MaterialApp(
+            theme: ThemeData(
+              scaffoldBackgroundColor: Colors.white,
+              // We apply this to our appBarTheme because most of our appBar have this style
+              appBarTheme: AppBarTheme(
+                color: Colors.white,
+                textTheme: ThemeData.light().textTheme.copyWith(
+                      headline6: TextStyle(
+                        color: Colors.black,
+                        fontSize: 20,
+                      ),
                     ),
-                    visualDensity: VisualDensity.adaptivePlatformDensity,
-                  ),
-                  home: appSnapshot.connectionState != ConnectionState.done
-                      ? LoadingScreen()
-                      : CategoriesScreen(),
-                  routes: {
-                    CommitLogScreen.routeName: (ctx) => CommitLogScreen(),
-                    AboutScreen.routeName: (ctx) => AboutScreen(),
-                  },
-                  onGenerateRoute: _onGenerateRoute,
-                ),
+                iconTheme: IconThemeData(color: Colors.black),
+                elevation: 0,
               ),
+              visualDensity: VisualDensity.adaptivePlatformDensity,
             ),
-          );
-        });
+            home: CategoriesScreen(),
+            routes: {
+              CommitLogScreen.routeName: (ctx) => CommitLogScreen(),
+              AboutScreen.routeName: (ctx) => AboutScreen(),
+            },
+            onGenerateRoute: _onGenerateRoute,
+          ),
+        ),
+      ),
+    );
   }
 
   // Routes that use a special page transition need to be registered in _onGenerateRoute
