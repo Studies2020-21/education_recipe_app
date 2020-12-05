@@ -31,6 +31,10 @@
 .pub/
 /build/
 
+# Test related
+/coverage/
+tests.output
+
 # Web related
 lib/generated_plugin_registrant.dart
 
@@ -49,3 +53,6 @@ app.*.map.json
 .firebase/
 /android/app/google-services.json
 /ios/Runner/GoogleService-Info.plist
+
+# SonarQube related
+.scannerwork/
