@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
+import 'globals.dart' as globals;
 import 'package:education_recipe_app/helpers/page_transitions_slide_in.dart';
 import 'package:education_recipe_app/screens/about_screen.dart';
 import 'package:education_recipe_app/screens/commit_log_screen.dart';
@@ -12,13 +14,20 @@ import 'package:education_recipe_app/screens/recipe_screen.dart';
 void main() async {
   // Initialize Firebase
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
-  runApp(EducationRecipeApp());
+  final FirebaseApp app = await Firebase.initializeApp();
+  final FirebaseFirestore firestore = FirebaseFirestore.instanceFor(app: app);
+  runApp(EducationRecipeApp(firestore: firestore));
 }
 
 class EducationRecipeApp extends StatelessWidget {
+  EducationRecipeApp({this.firestore});
+
+  final FirebaseFirestore firestore;
+
   @override
   Widget build(BuildContext context) {
+    globals.firestore = firestore;
+
     // Disable landscape mode
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,

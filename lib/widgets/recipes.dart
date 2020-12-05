@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 
+import 'package:education_recipe_app/globals.dart' as globals;
 import 'package:education_recipe_app/widgets/recipe_item.dart';
 
 class Recipes extends StatelessWidget {
@@ -12,7 +12,7 @@ class Recipes extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return StreamBuilder(
-      stream: FirebaseFirestore.instance
+      stream: globals.firestore
           .collection('static_categories')
           .doc(category)
           .collection('recipes')
