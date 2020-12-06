@@ -12,7 +12,9 @@ class CategoryItem extends StatelessWidget {
   final int countRecipes;
   final String image;
 
-  CategoryItem(this.id, this.title, this.description, this.color, this.countRecipes, this.image, {this.key});
+  CategoryItem(this.id, this.title, this.description, this.color,
+      this.countRecipes, this.image,
+      {this.key});
 
   void _selectCategory(BuildContext ctx) {
     Navigator.of(ctx).pushNamed(
@@ -69,9 +71,9 @@ class CategoryItem extends StatelessWidget {
                             color: Colors.white,
                           ),
                           SizedBox(width: 10),
-
                           Text(
-                            '${countRecipes.toString()} ' + (countRecipes == 1 ? 'Recipe' : 'Recipes'),
+                            '${countRecipes.toString()} ' +
+                                (countRecipes == 1 ? 'Recipe' : 'Recipes'),
                             style: TextStyle(color: Colors.white),
                           ),
                         ],
@@ -91,11 +93,13 @@ class CategoryItem extends StatelessWidget {
                       topRight: Radius.circular(10),
                       bottomRight: Radius.circular(10),
                     ),
-                    child: Image.network(
-                      image,
-                      fit: BoxFit.cover,
-                      alignment: Alignment.centerLeft,
-                    ),
+                    child: image == null
+                        ? Container()
+                        : Image.network(
+                            image,
+                            fit: BoxFit.cover,
+                            alignment: Alignment.centerLeft,
+                          ),
                   ),
                 ),
               ),
