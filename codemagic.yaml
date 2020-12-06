@@ -1,6 +1,3 @@
-# Automatically generated on 2020-12-06 UTC from https://codemagic.io/app/5fcd372a59d78f7d30dfcf80/settings
-# Note that this configuration is not an exact match to UI settings. Review and adjust as necessary.
-
 workflows:
   default-workflow:
     name: Default Workflow
@@ -26,15 +23,24 @@ workflows:
         # set up local properties
         echo "flutter.sdk=$HOME/programs/flutter" > "$FCI_BUILD_DIR/android/local.properties"
       - cd . && flutter packages pub get
-      - cd . && flutter build apk --debug
+      - cd . && flutter config --enable-web
+      - cd . && flutter test
+      - cd . && flutter build apk --release
       - find . -name "Podfile" -execdir pod install \;
-      - cd . && flutter build ios --debug --no-codesign
+      - cd . && flutter build ios --release --no-codesign
+      - |
+        # build web
+        cd .
+        flutter build web --release
+        cd build/web
+        7z a -r ../web.zip ./*
     artifacts:
       - build/**/outputs/**/*.apk
       - build/**/outputs/**/*.aab
       - build/**/outputs/**/mapping.txt
       - build/ios/ipa/*.ipa
       - /tmp/xcodebuild_logs/*.log
+      - build/web.zip
       - flutter_drive.log
     publishing:
       email:
