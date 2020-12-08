@@ -9,6 +9,11 @@ workflows:
       flutter: beta
       xcode: latest
       cocoapods: default
+    cache:
+      cache_paths:
+        - $HOME/Library/Caches/CocoaPods
+        - $HOME/.gradle/caches
+        - $FLUTTER_ROOT/.pub-cache
     scripts:
       - |
         # set up debug keystore
