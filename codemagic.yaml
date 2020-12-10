@@ -44,9 +44,9 @@ workflows:
         echo $FIREBASE_ANDROID | base64 --decode > $FCI_BUILD_DIR/android/app/google-services.json
         echo "\nListing Android Directory to confirm the google-services.json is there!"
         ls $FCI_BUILD_DIR/android/app
-      - cd . && flutter build apk --release
-      - find . -name "Podfile" -execdir pod install \;
-      - cd . && flutter build ios --release --no-codesign
+      - #cd . && flutter build apk --release
+      - #find . -name "Podfile" -execdir pod install \;
+      - #cd . && flutter build ios --release --no-codesign
       - |
         # build web
         cd .
