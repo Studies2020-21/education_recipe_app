@@ -18,7 +18,7 @@ Feel free to open up your own Firebase project and to compile and install the ap
 You can also drop me a note and join the beta testers.
 
 For a quick preview a web app version is also available:<br />
-[education-recipe-app.web.app](https://education-recipe-app.web.app/)
+<a href="https://education-recipe-app.web.app/" target="_blank">education-recipe-app.web.app</a>
 
 > :warning: To compile the web app on your own you have to switch to the beta channel of Flutter at present as this functionality is in an early stage.
 
