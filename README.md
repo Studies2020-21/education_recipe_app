@@ -28,6 +28,7 @@ For a quick preview a web app version is also available:<br />
 - Firebase Cloud Firestore
 - Firebase Storage
 - Firebase App Distribution
+- Codemagic
 
 For a full description of OSS used, see pubspec.yaml
 
