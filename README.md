@@ -1,7 +1,5 @@
 
 <div align="center">
-  <img src="./assets/images/logo.png" style="margin: auto;display: block;width: 22.5%" />
-  <br />
   <h1>Bildungsrezepte / Educational Recipes</h1>
   <strong>A recipe app for educational purposes with Flutter &amp; Dart for iOS, Android and Web.</strong>
   <br />
