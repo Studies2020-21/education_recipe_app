@@ -6,6 +6,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'globals.dart' as globals;
 import 'package:education_recipe_app/helpers/page_transitions_slide_in.dart';
 import 'package:education_recipe_app/screens/about_screen.dart';
+import 'package:education_recipe_app/screens/swagger_screen.dart';
 import 'package:education_recipe_app/screens/commit_log_screen.dart';
 import 'package:education_recipe_app/screens/categories_screen.dart';
 import 'package:education_recipe_app/screens/category_screen.dart';
@@ -59,6 +60,7 @@ class EducationRecipeApp extends StatelessWidget {
             routes: {
               CommitLogScreen.routeName: (ctx) => CommitLogScreen(),
               AboutScreen.routeName: (ctx) => AboutScreen(),
+              SwaggerScreen.routeName: (ctx) => SwaggerScreen(),
             },
             onGenerateRoute: _onGenerateRoute,
           ),

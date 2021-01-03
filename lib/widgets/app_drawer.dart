@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:education_recipe_app/screens/commit_log_screen.dart';
 import 'package:education_recipe_app/screens/about_screen.dart';
+import 'package:education_recipe_app/screens/swagger_screen.dart';
 
 class AppDrawer extends StatelessWidget {
   @override
@@ -19,6 +20,14 @@ class AppDrawer extends StatelessWidget {
             title: Text('Recipes'),
             onTap: () {
               Navigator.of(context).pushReplacementNamed('/');
+            },
+          ),
+          Divider(),
+          ListTile(
+            leading: Icon(Icons.compare_arrows_outlined),
+            title: Text('swagger.io Demo'),
+            onTap: () {
+              Navigator.of(context).pushReplacementNamed(SwaggerScreen.routeName);
             },
           ),
           Divider(),
